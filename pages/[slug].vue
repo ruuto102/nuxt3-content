@@ -3,7 +3,7 @@ const { slug } = useRoute().params;
 </script>
 
 <template>
-    <article class="bg-white rounded-2xl">
+    <article class="bg-white rounded-2xl mb-16">
       <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
         <!-- Header  -->
         <header>
@@ -27,6 +27,11 @@ const { slug } = useRoute().params;
         <!-- ./textarea -->
 
       </ContentDoc>
+      <div class="text-center">
+        <NuxtLink to="/">
+          <button class="py-2 px-4 bg-white rounded-xl border my-3">Back to Top</button>
+        </NuxtLink>
+      </div>
     </article>
   </template>
 
@@ -56,5 +61,8 @@ const { slug } = useRoute().params;
 }
 .content h5 {
   @apply text-base font-bold;
+}
+.content img {
+  @apply mx-auto;
 }
 </style>
