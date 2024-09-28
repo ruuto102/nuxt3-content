@@ -12,7 +12,7 @@ slug: "hello-world"
 
 初めは以前のソースとDocsを元にしていましたが、下記の動画を参考にこちらのブログが完成しました。
 [![Nuxt Content Tutorial: Build an Elegant Blog from Scratch (Deployed on Vercel) by Jahid Anowar](/img/yotube.jpg)](https://www.youtube.com/watch?v=wW1gePu3Wl8&t=914s)
-Nuxt Content Tutorial: Build an Elegant Blog from Scratch (Deployed on Vercel) by Jahid Anowar
+[Nuxt Content Tutorial: Build an Elegant Blog from Scratch (Deployed on Vercel) by Jahid Anowar](https://www.youtube.com/watch?v=wW1gePu3Wl8&t=914s)
 
 インド出身の方のようですが、英語も聞き取りやすく、かつチュートリアルでコードを一緒に追っていって無駄がなくわかりやすかったです。
 
