@@ -24,7 +24,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <div class="blog-card bg-white rounded-2xl overflow-hidden mb-4 max-w-lg relative">
+    <div class="blog-card bg-white rounded-2xl overflow-hidden mb-4 max-w-lg relative hover:scale-105 cursor-pointer">
         <NuxtLink :to="`/${link}`">
             <div class="h-24 md:h-40 relative">
                 <img
@@ -33,7 +33,7 @@ const props = defineProps({
                 />
             </div>
 
-            <div class="blog-card--meta px-2 py-4">
+            <div class="blog-card--meta px-2 py-4 tracking-widest">
                 <h3 class="text-sm md:text-xl font-semibold mb-8">
                     {{ title }}
                 </h3>

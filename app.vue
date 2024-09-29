@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl px-4 flex flex-col mx-auto h-screen">
+  <div class="max-w-6xl px-4 flex flex-col mx-auto h-screen">
     <Header />
 
      <!-- Main Content -->
