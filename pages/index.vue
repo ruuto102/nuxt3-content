@@ -1,5 +1,4 @@
-<script lang="ts">
-import { Card } from '#build/components';
+<script>
 </script>
 
 <template>
@@ -24,7 +23,7 @@ import { Card } from '#build/components';
                 :link="post.slug"
                 :image="post.thumbnail"
                 class=""
-                />
+            />
         </ContentList>
     </div>
 </template>
