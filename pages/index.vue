@@ -28,7 +28,7 @@
                 </div>
 
                 <div class="blog-card--meta p-4">
-                    <h3 class="text-2xl front-semibllold">
+                    <h3 class="text-2xl front-semibold">
                         <NuxtLink :to="`/${post.slug}`">{{ post.title }}</NuxtLink>                  
                     </h3>
                     <div class="text-sm text-gray-500 mt-px">

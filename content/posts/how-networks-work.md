@@ -1,7 +1,7 @@
 ---
 title: "【読書記録】ネットワークはなせつながるのか第二版①"
 date: 2024/9/28
-darft: false
+draft: false
 tags: ["hello", "world"]
 thumbnail: '/img/HowNetworksWork.jpg'
 slug: "how-networks-work"
