@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
-      title: 'Yoshi7 Blog'
+      title: 'Yoshi7.Blog'
     }
   },
   $development: {
