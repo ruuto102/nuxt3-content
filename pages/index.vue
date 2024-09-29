@@ -1,7 +1,9 @@
-<script lang="ts"></script>
+<script lang="ts">
+import { Card } from '#build/components';
+</script>
 
 <template>
-    <div>
+    <div class="grid grid-rows grid-cols-2 md:grid-cols-3 gap-4 xl:gap-10">
         <ContentList
             path="/posts"
             :query="{
@@ -13,29 +15,16 @@
                 ]
             }"
             v-slot="{ list }"
-        >           
-            <div
+        >
+            <Card
                 v-for="post in list"
                 :key="post._path"
-                class="blog-card bg-white rounded-2xl overflow-hidden mb-4"
-            >
-                
-                <div class="h-[320px] relative">
-                    <img
-                        :src="post.thumbnail"
-                        class="w-full h-full object-cover absolute"
-                    />
-                </div>
-
-                <div class="blog-card--meta p-4">
-                    <h3 class="text-2xl front-semibold">
-                        <NuxtLink :to="`/${post.slug}`">{{ post.title }}</NuxtLink>                  
-                    </h3>
-                    <div class="text-sm text-gray-500 mt-px">
-                        {{ post.date }}
-                    </div>
-                </div>
-            </div>
+                :title="post.title"
+                :date="post.date"
+                :link="post.slug"
+                :image="post.thumbnail"
+                class=""
+                />
         </ContentList>
     </div>
 </template>

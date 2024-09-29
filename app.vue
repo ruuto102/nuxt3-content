@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-3xl px-4 mx-auto">
+  <div class="max-w-7xl px-4 mx-auto">
     <Header />
 
      <!-- Main Content -->
