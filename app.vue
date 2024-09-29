@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-7xl px-4 mx-auto">
+  <div class="max-w-7xl px-4 flex flex-col mx-auto h-screen">
     <Header />
 
      <!-- Main Content -->
@@ -7,6 +7,10 @@
     <NuxtPage />
 
      <!-- ./Main Content -->
+
+     <Footer
+      class="mt-auto"
+     />
   </div>
 </template>
 
