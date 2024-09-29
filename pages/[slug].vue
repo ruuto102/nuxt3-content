@@ -7,9 +7,13 @@ const { slug } = useRoute().params;
       <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
         <!-- Header  -->
         <header>
-          <div class="text-center p-5">
-            <h1 class="text-4xl font-bold lg:w-2/3 mx-auto">{{ doc.title }}</h1>
-            <p class="text-gray-500 text-sm mt-2">{{ doc.date }}</p>
+          <div class="px-4">
+            <h1 class="text-xl md:text-4xl font-bold mx-auto leading-8 py-5 ml:py-10">
+              {{ doc.title }}
+            </h1>
+            <p class="text-gray-500 text-sm">
+              {{ doc.date }}
+            </p>
           </div>
           <img
             v-if="doc.thumbnail"
@@ -21,11 +25,10 @@ const { slug } = useRoute().params;
         <!-- ./ Header  -->
 
         <!-- textarea -->
-        <div class="p-5 content">
+        <div class="p-4 content">
           <ContentRenderer :value="doc"></ContentRenderer>
         </div>
         <!-- ./textarea -->
-
       </ContentDoc>
       <div class="text-center">
         <NuxtLink to="/">
@@ -45,8 +48,21 @@ const { slug } = useRoute().params;
 .content h4:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  @apply mb-4;
+  @apply mb-5;
 }
+.content p,
+.content li,
+.content blockquote,
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content pre,
+.content table {
+  @apply tracking-widest leading-7
+}
+
 .content h1 {
   @apply text-3xl font-bold;
 }
