@@ -1,6 +1,6 @@
 ---
 title: BEMの理解を深めて活用しよう
-date: 2021/08/14
+date: 2021-08-14
 darft: false
 tags: ["hello", "world"]
 thumbnail: '/img/Hello.png'

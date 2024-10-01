@@ -1,6 +1,6 @@
 ---
 title: "ブログ移転しました。"
-date: 2024/9/27
+date: 2024-09-27
 darft: false
 tags: ["hello", "world"]
 thumbnail: '/img/Hello.png'

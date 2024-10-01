@@ -1,6 +1,6 @@
 ---
 title: "【読書記録】ネットワークはなぜつながるのか第二版①\nブラウザでURLを入力して画面が表示されるまで"
-date: 2024/9/28
+date: 2024-09-28
 draft: false
 tags: ["hello", "world"]
 thumbnail: '/img/HowNetworksWork.jpg'
