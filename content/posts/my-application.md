@@ -1,6 +1,6 @@
 ---
 title: "個人開発したいものができました"
-date: 2024/9/30
+date: 2024-09-30
 draft: false
 tags: ["hello", "world"]
 thumbnail: '/img/coding.svg'

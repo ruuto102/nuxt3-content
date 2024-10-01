@@ -1,6 +1,6 @@
 ---
 title: "【読書記録】ネットワークはなぜつながるのか第二版②\nHTTPリクエスト"
-date: 2024/9/29
+date: 2024-09-29
 draft: false
 tags: ["hello", "world"]
 thumbnail: '/img/HowNetworksWork.jpg'

@@ -79,6 +79,6 @@ const { slug } = useRoute().params;
   @apply text-base font-bold;
 }
 .content img {
-  @apply mx-auto w-3/4;
+  @apply mx-auto w-full md:w-3/4;
 }
 </style>

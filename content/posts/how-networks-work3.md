@@ -1,6 +1,6 @@
 ---
 title: "【読書記録】ネットワークはなぜつながるのか第二版③\nTCP/IPとDNSリゾルバ"
-date: 2024/9/30
+date: 2024-09-30
 draft: false
 tags: ["hello", "world"]
 thumbnail: '/img/HowNetworksWork.jpg'
