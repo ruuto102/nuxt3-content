@@ -1,5 +1,12 @@
 <script setup lang="ts">
+import { useAsyncData } from '#app'; 
+import { format } from 'date-fns';
+
 const { slug } = useRoute().params;
+const { data: doc } = await useAsyncData(() => queryContent(`/posts/${slug}`).findOne());
+const formattedDate = computed(() => {
+  return doc.value?.date ? format(new Date(doc.value.date), 'yyyy/MM/dd') : '日付なし';
+});
 </script>
 
 <template>
@@ -12,7 +19,7 @@ const { slug } = useRoute().params;
               {{ doc.title }}
             </h1>
             <p class="text-gray-500 text-sm">
-              {{ doc.date }}
+              公開日: {{ formattedDate }}
             </p>
           </div>
           <img
