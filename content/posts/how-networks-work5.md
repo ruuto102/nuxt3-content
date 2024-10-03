@@ -10,4 +10,4 @@ slug: "how-networks-work5"
 
 
 ＜メモ＞10/2 JavaScrip学習：30分   
-　　　　10/3  執筆時間：時間、JavaScrip学習：3時間10分、サイト修正２時間
+　　　　10/3  執筆時間：時間、JavaScrip学習：3時間10分、サイト修正:2時間

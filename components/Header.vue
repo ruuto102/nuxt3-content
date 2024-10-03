@@ -1,6 +1,6 @@
 <template>
     <header class="py-4 flex justify-between items-end">
-        <dev>
+        <div>
             <h1 class="text-2xl font-semibold md:text-4xl">
                 <NuxtLink to="/">
                     <span class="font-bold">
@@ -12,6 +12,6 @@
                 </NuxtLink>
             </h1>
             <!-- <p class="text-gray-500">Learn programming</p> -->
-        </dev>
+        </div>
     </header>
 </template>

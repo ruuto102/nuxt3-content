@@ -69,7 +69,9 @@ const formattedDate = computed(() => {
 .content table {
   @apply tracking-widest leading-7
 }
-
+.content li {
+  @apply pl-3;
+}
 .content h1 {
   @apply text-3xl font-bold;
 }

@@ -23,9 +23,11 @@ slug: "bem"
   - Elementは並列で複数存在する場合あり
   - ※入子が深くなる場合は、Blockを作成できないか検討する
 
+
 - Modifier
   - パーツ構成は一緒だが「見た目」や「動き」の違うパーツを作成する際にModifierを使用
   - BlockやElementの変化
+
   
 # BEMの命名
 Block__element-modifier　の形
