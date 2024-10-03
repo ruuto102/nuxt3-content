@@ -1,7 +1,12 @@
 {
     "cSpell.words": [
         "Nuxt",
+        "Saitama",
         "tailwindcss",
         "yoshi"
-    ]
+    ],
+    "css.lint.unknownAtRules": "ignore",
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
 }

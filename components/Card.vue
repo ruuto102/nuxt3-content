@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { format } from 'date-fns';
 const props = defineProps({
     title: {
         type: String,
@@ -21,6 +22,7 @@ const props = defineProps({
         required: true
       }
 })
+const formattedDate = format(new Date(props.date), 'yyyy/MM/dd') 
 </script>
 
 <template>
@@ -38,7 +40,7 @@ const props = defineProps({
                     {{ title }}
                 </h3>
                 <div class="text-xs md:text-sm text-gray-500 absolute bottom-4 left-2">
-                    {{ date }}
+                    {{ formattedDate }}
                 </div>
             </div>
         </NuxtLink>
