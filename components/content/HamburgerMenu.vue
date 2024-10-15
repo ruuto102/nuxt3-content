@@ -2,9 +2,9 @@
   <div>
     <!-- ハンバーガーアイコン -->
     <button @click="toggleMenu" class="hamburger focus:outline-none z-50 relative">
-      <span :class="{ 'transform rotate-45': isOpen }" class="block w-8 h-0.5 bg-black mb-1 transition-all duration-300"></span>
+      <span :class="['block w-8 h-0.5 bg-black mb-1 transition-all duration-300', { 'transform rotate-45 mb-0.5 important-class': isOpen }]"></span>
       <span :class="{ 'opacity-0': isOpen }" class="block w-8 h-0.5 bg-black mb-1 transition-all duration-300"></span>
-      <span :class="{ '-rotate-45 -translate-y-2': isOpen }" class="block w-8 h-0.5 bg-black transition-all duration-300"></span>
+      <span :class="['block w-8 h-0.5 bg-black transition-all duration-300', { '-rotate-45 -translate-y-2 important-class': isOpen }]"></span>
     </button>
 
     <!-- 全画面表示のメニュー -->
@@ -43,5 +43,9 @@ export default {
 /* メニューを開いたときのアニメーション */
 .hamburger span {
   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.important-class {
+  @apply bg-white !important;
 }
 </style>
