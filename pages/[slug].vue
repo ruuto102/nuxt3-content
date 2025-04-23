@@ -1,49 +1,54 @@
 <script setup lang="ts">
-import { useAsyncData } from '#app'; 
-import { format } from 'date-fns';
+import { ref } from 'vue'
+import { useAsyncData } from '#app'
+import { format } from 'date-fns'
 
-const { slug } = useRoute().params;
-const { data: doc } = await useAsyncData(() => queryContent(`/posts/${slug}`).findOne());
+const { slug } = useRoute().params
+const { data: doc } = await useAsyncData(() => queryContent(`/posts/${slug}`).findOne())
 const formattedDate = computed(() => {
-  return doc.value?.date ? format(new Date(doc.value.date), 'yyyy/MM/dd') : '日付なし';
-});
+  return doc.value?.date ? format(new Date(doc.value.date), 'yyyy/MM/dd') : '日付なし'
+})
+const loaded = ref(false)
 </script>
 
 <template>
-    <article class="bg-white rounded-2xl mb-4">
-      <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
-        <!-- Header  -->
-        <header>
-          <div class="px-4">
-            <h1 class="text-xl md:text-4xl font-bold mx-auto leading-8 py-5 ml:py-10">
-              {{ doc.title }}
-            </h1>
-            <p class="text-gray-500 text-sm">
-              公開日: {{ formattedDate }}
-            </p>
-          </div>
-          <img
-            v-if="doc.thumbnail"
-            :src="doc.thumbnail"
-            :alt="doc.title"
-            class="w-full p-4 max-h-96 object-contain"
-          />
-        </header>
-        <!-- ./ Header  -->
-
-        <!-- textarea -->
-        <div class="p-4 content">
-          <ContentRenderer :value="doc"></ContentRenderer>
+  <article class="mb-4 rounded-2xl bg-white dark:bg-gray-700">
+    <ContentDoc :path="`/posts/${slug}`" v-slot="{ doc }">
+      <!-- Header  -->
+      <header>
+        <div class="px-4">
+          <h1 class="ml:py-10 mx-auto py-5 text-xl font-bold leading-8 md:text-4xl">
+            {{ doc.title }}
+          </h1>
+          <p class="text-sm text-gray-500 dark:text-gray-100">公開日: {{ formattedDate }}</p>
         </div>
-        <!-- ./textarea -->
-      </ContentDoc>
-      <div class="text-center">
-        <NuxtLink to="/">
-          <button class="py-2 px-4 bg-white rounded-xl border my-3">Back to Top</button>
-        </NuxtLink>
+        <NuxtImg
+          v-if="doc.thumbnail"
+          :src="doc.thumbnail"
+          :alt="doc.title"
+          placeholder="blur"
+          class="aspect-square max-h-96 w-full object-contain p-4 transition-opacity duration-500"
+          :class="{ 'opacity-0': !loaded, 'opacity-100': loaded }"
+          @load="loaded = true"
+        />
+      </header>
+      <!-- ./ Header  -->
+
+      <!-- textarea -->
+      <div class="content p-4 text-sm">
+        <ContentRenderer :value="doc"></ContentRenderer>
       </div>
-    </article>
-  </template>
+      <!-- ./textarea -->
+    </ContentDoc>
+    <div class="text-center">
+      <NuxtLink to="/">
+        <button class="my-3 rounded-xl border bg-white px-4 py-2 dark:bg-gray-500">
+          Back to Top
+        </button>
+      </NuxtLink>
+    </div>
+  </article>
+</template>
 
 <style>
 .content p:not(:last-child),
@@ -55,7 +60,7 @@ const formattedDate = computed(() => {
 .content h4:not(:last-child),
 .content pre:not(:last-child),
 .content table:not(:last-child) {
-  @apply mb-5;
+  @apply mb-4;
 }
 .content p,
 .content li,
@@ -67,7 +72,7 @@ const formattedDate = computed(() => {
 .content h5,
 .content pre,
 .content table {
-  @apply tracking-widest leading-7
+  @apply leading-7 tracking-widest;
 }
 .content li {
   @apply pl-3;
