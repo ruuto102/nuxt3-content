@@ -1,18 +1,15 @@
 <template>
   <div class="relative h-64 md:h-96">
-    <!-- 背景の円1 -->
     <div
       class="absolute -top-3 right-4 hidden h-64 w-64 transform rounded-full bg-yellow-50 opacity-40 transition-transform duration-700 ease-out dark:block md:right-96 md:top-1 md:h-80 md:w-80"
       :class="{ 'scale-0': !loaded, 'scale-100': loaded }"
     />
 
-    <!-- 背景の円2 -->
     <div
       class="absolute right-16 top-12 hidden h-48 w-48 transform rounded-full bg-yellow-100 opacity-90 transition-transform duration-700 ease-out dark:block md:right-[27rem] md:top-12 md:h-64 md:w-64"
       :class="{ 'scale-0': !loaded, 'scale-100': loaded }"
     />
 
-    <!-- 吹き出しテキスト -->
     <p
       class="speechBubble font-gloria absolute left-2 top-5 text-sm transition-opacity duration-1000 md:left-80 md:top-10 md:text-xl"
       :class="{ 'opacity-0': !loaded, 'opacity-100': loaded, 'animate-seesaw': isShaking }"
@@ -20,7 +17,6 @@
       I'm learning to code 🐾
     </p>
 
-    <!-- プロフィール画像 -->
     <div class="md:translate-x- absolute -right-4 top-12 md:right-96 md:top-8">
       <NuxtImg
         src="/img/girl.png"
